@@ -10,8 +10,6 @@ mpFil = '1'; % '1' or '2'. The level number.
 getTemplate = true; % true or false. 
 plt = 1; % false; % true or false
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-set(0,'defaulttextinterpreter','latex')
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Results %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -32,6 +30,7 @@ set(0,'defaulttextinterpreter','latex')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rng(10)
+set(0,'defaulttextinterpreter','latex')
 disp(['Version: ',num2str(VERSION)])
 disp(['Color absmode: ',num2str(newRGB)])
 disp(['Warning mode: ',warning_mode])
@@ -46,7 +45,7 @@ vidObject = VideoReader([mpFil, 'level.mp4']);      % Loading video file.
 vidObject.CurrentTime = 10;               % Skipping menu intro.
 
 
-load('Mario_pos2.mat')
+load('Data\Mario_pos2.mat')
  
 
 % Make color decision, 0 or 1. 
